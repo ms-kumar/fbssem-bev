@@ -1,0 +1,36 @@
+[project]
+name = "fbssem-bev"
+version = "0.1.0"
+description = "Standalone NumPy/OpenCV FB-SSEM fisheye-to-BEV transformer"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "LicenseRef-Proprietary"
+dependencies = [
+	"numpy>=2.0",
+	"opencv-python>=4.10",
+]
+
+[project.scripts]
+fbssem-bev = "fbssem_bev.cli:main"
+
+[dependency-groups]
+dev = [
+	"pytest>=8.0",
+	"pytest-cov>=5.0",
+	"ruff>=0.9",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.19,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers --strict-config"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "SIM", "UP"]

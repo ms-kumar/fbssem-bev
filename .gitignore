@@ -1,0 +1,56 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+
+# Virtual environments and local Python tooling
+.venv/
+venv/
+env/
+!.python-version
+.env
+.env.*
+!.env.example
+
+# Build and packaging outputs
+build/
+dist/
+*.egg-info/
+*.egg
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Local datasets and generated outputs
+fb_ssem/
+fb_ssem_subset/
+data/
+datasets/
+generated/
+bev_output/
+rgb_und/
+
+# Model artifacts and large local arrays
+*.ckpt
+*.npy
+*.npz
+*.onnx
+*.pth
+*.pt
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*~
